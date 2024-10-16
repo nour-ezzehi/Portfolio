@@ -1,4 +1,4 @@
-{
+{/*
   "$schema": "https://ui.shadcn.com/schema.json",
   "style": "default",
   "rsc": true,
@@ -17,4 +17,4 @@
     "examples": "@/components/examples",
     "blocks": "@/components/blocks"
   }
-}
+}*/
