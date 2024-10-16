@@ -15,16 +15,16 @@ const Skills = () => {
 }
 const skills = [
   {
-    title: "Web Dev",
-    skills: ["Node.js", "Express.js", "Rest APIs", "React", "Next.js", "Django", "Nest.js", "Angular", "Symphony"],
+    title: "Data & ML",
+    skills: ["Python", "TensorFlow", "Keras", "Scikit-learn", "Matplotlib", "Seaborn", "Pytorch", "Pandas", "Numpy", "OpenCV"],
   },
   {
-    title: "Machine Learning",
-    skills: ["Python", "TensorFlow", "Keras", "Scikit-learn", "Matplotlib", "Seaborn", "Pytorch", "Pandas", "Numpy"],
+    title: "Software Development",
+    skills: ["Git & GitHub", "Docker", "CI/CD", "Scrum", "Java", "C++", "C", "Arduino", "Go", "AWS", "Linux"],
   },
   {
-    title: "Other",
-    skills: ["Git & GitHub", "Kubernetes", "CI/CD", "Jenkins"],
+    title: "Web Development",
+    skills: ["Node.js", "Express.js", "Rest APIs", "React", "Next.js", "Django", "Nest.js", "Angular", "Symphony", "Vue.js"],
   },
 ];
 

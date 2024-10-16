@@ -3,6 +3,7 @@ import Hero from '../components/Hero'
 import AboutMe from '../components/AboutMe'
 import Skills from '../components/Skills'
 import Contact from '../components/Contact'
+import Services from '../components/Services'
 
 const Home = () => {
   return (
@@ -11,16 +12,19 @@ const Home = () => {
       <div>
         <NavbarDemo />
       </div>
-      <div className=''>
+      <div id="hero" className=''>
         <Hero />
       </div>
-      <div className='mb-12'>
+      <div id="about" className='mb-12'>
         <AboutMe />
       </div>
-      <div className='mt-48'>
-        <Skills />
+      <div id="skills" className='mt-40 mb-32'>
+        <Skills/>
       </div>
-      <div className='mt-48  bg-white w-full'>
+      <div>
+        <Services />
+      </div>
+      <div id="contact" className='mt-48  bg-white w-full'>
         <Contact />
       </div>
     </main>

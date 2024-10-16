@@ -3,8 +3,7 @@ import { Spotlight } from './ui/Spotlight'
 import { TextGenerateEffect } from './ui/TextGenerateEffect';
 import { BackgroundBeamsWithCollision } from './ui/BackgroundBeamsWithCollision';
 import Link from 'next/link'
-import { FaGithub } from "react-icons/fa6";
-import { FaLinkedin } from "react-icons/fa";
+import { FaFacebook, FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 
 const Hero = () => {
   return (
@@ -25,14 +24,16 @@ const Hero = () => {
           />
           <h1 className='text-2xl text-font font-light'>Currently<span className='text-lg pl-2 underline'>Open to Work</span></h1>
           <div className='flex flex-col space-y-2'>
-          <Link href="#">
+          <Link href="#contact">
             <button className="px-8 py-2 w-48 rounded-md bg-violet-500 text-white font-bold transition duration-200 hover:bg-white hover:text-font border-2 border-transparent hover:border-violet-500">
               Contact me
             </button>
           </Link>
-          <div className='flex flex-row space-x-4 center pl-14'>
+          <div className='flex flex-row space-x-4 center pl-6'>
             <FaGithub className='text-2xl'/>
             <FaLinkedin className='text-2xl'/>
+            <FaEnvelope className='text-2xl'/>
+            <FaFacebook className='text-2xl'/>
           </div>
           </div>
 

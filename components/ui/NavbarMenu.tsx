@@ -17,20 +17,43 @@ export const MenuItem = ({
   active,
   item,
   children,
+  href,
+  isResume,
 }: {
   setActive: (item: string) => void;
   active: string | null;
   item: string;
   children?: React.ReactNode;
+  href: string;
+  isResume?: boolean;
 }) => {
   return (
     <div onMouseEnter={() => setActive(item)} className="relative ">
-      <motion.p
-        transition={{ duration: 0.7 }}
-        className="cursor-pointer text-black hover:opacity-[0.7] dark:text-font"
-      >
-        {item}
-      </motion.p>
+      {isResume ? (
+        // External link for resume, handled as an <a> tag
+        <motion.a
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => setActive(item)}
+          className="block cursor-pointer text-black hover:opacity-[0.7] dark:text-font"
+          transition={transition}
+        >
+          <div>
+            <motion.p>{item}</motion.p>
+          </div>
+        </motion.a>
+      ) : (
+        // Internal navigation link handled by Next.js <Link>
+        <Link href={href} passHref>
+          <div
+            onClick={() => setActive(item)}
+            className="block cursor-pointer text-black hover:opacity-[0.7] dark:text-font"
+          >
+            <motion.p transition={transition}>{item}</motion.p>
+          </div>
+        </Link>
+      )}
       {active !== null && (
         <motion.div
           initial={{ opacity: 0, scale: 0.85, y: 10 }}
