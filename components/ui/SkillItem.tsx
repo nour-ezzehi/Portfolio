@@ -4,7 +4,7 @@ interface SkillItemProps {
 
 const SkillItem = ({ title }: SkillItemProps) => {
   return (
-    <div className="bg-purple-400 p-2 rounded-md border shadow-lg shadow-font text-lg text-center">
+    <div className="bg-purple-400 p-2 rounded-md border shadow-lg shadow-font text-lg max-lg:text-sm text-center">
       {title}
     </div>
   );

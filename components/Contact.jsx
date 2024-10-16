@@ -46,10 +46,9 @@ const Contact = () => {
     },
   ];
   return (
-
     <div className="flex flex-col items-center justify-center h-[40rem] space-y-4 m-2">
-      <div className='mb-12'><TypewriterEffect words={words} /></div>
-      <div className="max-w-5xl mx-auto px-8">
+      <div className='lg:mb-12 mb-6'><TypewriterEffect words={words} /></div>
+      <div className=" mx-auto lg:px-8">
         {/* Single column grid layout for all screen sizes */}
         <div className="grid grid-cols-1 gap-1">
           {links.map((link, idx) => (
@@ -63,9 +62,9 @@ const Contact = () => {
             className={cn(
               // Apply different styles for odd and even buttons
               idx % 2 === 0
-                ? "bg-blue-300 text-white font-bold text-xl"
-                : "bg-white dark:bg-slate-900 text-blue-300 font-bold text-xl dark:text-white",
-              "tracking-wide font-medium border-neutral-200 dark:border-slate-800" // Common styles
+                ? "bg-blue-300 text-white font-bold max-lg:text-sm text-xl"
+                : "bg-white dark:bg-slate-900 text-blue-300 font-bold text-xl max-lg:text-sm dark:text-white",
+              "lg:tracking-wide max-lg:tracking-tight font-medium border-neutral-200 dark:border-slate-800" // Common styles
             )} // Added w-full to ensure full width
             >
               <div className='flex flex-row space-x-2'>

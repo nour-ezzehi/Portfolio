@@ -5,22 +5,54 @@ import { BackgroundBeamsWithCollision } from './ui/BackgroundBeamsWithCollision'
 import Link from 'next/link'
 import { FaFacebook, FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 
+const ResponsiveSection = () => {
+  return (
+    <div className='flex flex-col p-4 space-y-2 lg:hidden mt-16'>
+      <div className='flex flex-col space-y-2 text-center text-wrap'>
+        <h1 className='font-bold text-font text-2xl text-center mb-4'>I am Nour Ezzehi</h1>
+        <h2 className="bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 text-transparent bg-clip-text text-md">
+          Web developer & machine learning engineer
+        </h2>
+        <TextGenerateEffect
+          words="I bring a unique perspective to building functional and pleasing web solutions."
+          className="text-center text-sm font-light"
+        />
+        <h3 className='text-md text-font font-light'>
+          Currently <span className='text-sm pl-2 underline'>Open to Work</span>
+        </h3>
+      </div>
+      <div className='flex flex-col items-center space-y-2'>
+        <Link href="#contact">
+          <button className="px-2 py-2 w-28 text-sm rounded-md bg-violet-500 text-white font-bold transition duration-200 hover:bg-white hover:text-font border-2 border-transparent hover:border-violet-500">
+            Contact me
+          </button>
+        </Link>
+        <div className='flex justify-center space-x-4'>
+          <FaGithub className='text-2xl' />
+          <FaLinkedin className='text-2xl' />
+          <FaEnvelope className='text-2xl' />
+          <FaFacebook className='text-2xl' />
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const Hero = () => {
   return (
-    <div className='pt-28 pb-4'>
-      <div>
-        <div className='w-screen'>
+    <div className='lg:pt-28 lg:pb-4 pt-28 mt:20 max-lg:mb-40'>
+        <div className='w-screen hidden lg:block'>
         <BackgroundBeamsWithCollision>
-        <div className="flex flex-row">
-          <div className='basis-1/2 p-6 flex flex-col space-y-2'>
-            <h1 className='font-bold text-font text-5xl'>I am Nour Ezzehi</h1>
-            <h1 className="bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 text-transparent bg-clip-text text-2xl">
+        <div className="flex lg:flex-row flex-col">
+          <div className='lg:basis-1/2 p-6 lg:flex flex-col lg:space-y-2'>
+            <h1 className='font-bold text-font lg:text-5xl'>I am Nour Ezzehi</h1>
+            <h1 className="bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 text-transparent bg-clip-text lg:text-2xl text-lg">
               Web developer & machine learning engineer
             </h1>
             <TextGenerateEffect
             words="I bring a unique perspective to building functional
             and pleasing web solutions."
-            className="text-center text-[20px] md:text-xl font-light lg:text-xl whitespace-nowrap"
+            className="text-center text-[26px] font-light whitespace-nowrap"
           />
           <h1 className='text-2xl text-font font-light'>Currently<span className='text-lg pl-2 underline'>Open to Work</span></h1>
           <div className='flex flex-col space-y-2'>
@@ -36,9 +68,8 @@ const Hero = () => {
             <FaFacebook className='text-2xl'/>
           </div>
           </div>
-
           </div>
-          <h2 className="text-2xl relative z-20 md:text-xl lg:text-xl font-bold text-center text-black dark:text-white font-sans tracking-tight basis-1/2">
+          <h2 className="text-2xl relative z-20 md:text-xl lg:text-xl font-bold text-center text-black max-lg:hidden dark:text-white font-sans tracking-tight basis-1/2">
             Transform your vision into reality{" "}
             <div className="relative mx-auto inline-block w-max [filter:drop-shadow(0px_1px_3px_rgba(27,_37,_80,_0.14))]">
             </div>
@@ -58,8 +89,8 @@ const Hero = () => {
           <Spotlight className="left-80 top-28 h-[80vh] w-[50vw]" fill="blue" />
         </div>
         </div>
+        <ResponsiveSection />
       </div>
-    </div>
   )
 }
 
